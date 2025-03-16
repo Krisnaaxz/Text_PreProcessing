@@ -22,12 +22,14 @@ data = [re.sub(r'[^a-z\s]', '', d) for d in data]
 
 #Tokenisasi data text
 token = [d.split() for d in data]
+print("\nHasil Tokenisasi: ", token)
 
 #Stopsword removal
 stopword_factory = StopWordRemoverFactory()
 stopwords = stopword_factory.get_stop_words()
 
 token = [[k for k in kal if k not in stopwords] for kal in token]
+print("\nHasil Stopword Removal: ", token)
 
 #Stemming
 stemmer_factory = StemmerFactory()
@@ -38,11 +40,11 @@ token = [[stemmer.stem(word) for word in k] for k in token]
 #Menghapus duplikasi token
 #token = [list(dict.fromkeys(kal)) for kal in token]
 
-print("Token: ", token)
+print("\nHasil Stemming: ", token)
 
-print("==============================================")
-print("\nData Preprocessing: \n")
+print("\n\n==============================================")
+print("Hasil Preprocessing: \n")
 for i, words in enumerate(token):
-    words = " ".join(words)
+    words = ", ".join(words)
     print(f"Doc {i+1}: {words}")
 print("==============================================")
