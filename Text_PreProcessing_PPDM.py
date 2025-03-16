@@ -14,10 +14,10 @@ data = [
     "Informasi tata cara daftar ulang bagi mahasiswa baru PTIIK kurang jelas. Sehingga ketika tanggal terakhir syarat penyerahan berkas daftar ulang, banyak mahasiswa baru yang tidak membawa salah satu syarat daftar ulangnya."
     ]
 
-#case folding
+#Case folding
 data = [d.lower() for d in data]
 
-# Menghilangkan spasi, tanda baca, dan angka
+#Menghilangkan spasi, tanda baca, dan angka
 data = [re.sub(r'[^a-z\s]', '', d) for d in data]
 
 #Tokenisasi data text
@@ -34,6 +34,9 @@ stemmer_factory = StemmerFactory()
 stemmer = stemmer_factory.create_stemmer()
 
 token = [[stemmer.stem(word) for word in k] for k in token]
+
+#Menghapus duplikasi token
+#token = [list(dict.fromkeys(kal)) for kal in token]
 
 print("Token: ", token)
 
