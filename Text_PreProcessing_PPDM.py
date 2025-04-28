@@ -5,9 +5,9 @@ from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
 data = [
     #doc 1
-    "elearning di PTTIK diatas jam 6 malam kok selalu gak bisa dibuka ya?",
+    "elearning di PTIIK diatas jam 6 malam kok selalu gak bisa dibuka ya?",
     #doc 2       
-    "ub tidak punya lahan parkir yang layak. Dan jalanan selalu ramai karena di buka untuk umum. Seperti jalan tol saja. Brawijaya oh brawijaya",
+    "ub tidak punya lahan parkir yang layak. Dan jalanan terlalu ramai karena di buka untuk umum. Seperti jalan tol saja. Brawijaya oh brawijaya",
     #doc 3       
     "Kelas Arsitektur dan Organisasi Komputer penuh, apakah tidak dibuka kelas lagi. Rugi kalo saya bisa ngambil 24 SKS tapi baru 18 SKS yg terpenuhi",
     #doc 4
